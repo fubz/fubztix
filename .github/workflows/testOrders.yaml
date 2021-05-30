@@ -2,7 +2,9 @@ name: Orders Tests
 
 on:
   pull_request:
-  
+    paths:
+      - 'orders/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
