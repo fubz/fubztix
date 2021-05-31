@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
   rules:
-    - host: tix.fubz.rocks
+    - host: tix.msgsync.xyz
       http:
         paths:
           - path: /api/users
