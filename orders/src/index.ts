@@ -7,6 +7,7 @@ import { ExpirationCompleteListener } from './events/listeners/expirationComplet
 import { PaymentCreatedListener } from './events/listeners/paymentCreatedListener'
 
 const start = async () => {
+  console.log(`orders service starting up on ${process.env.HOSTNAME}`)
   // Check environment variables
   if (!process.env.JWT_KEY) {
     throw new Error('Please define JWT_KEY environment variable')

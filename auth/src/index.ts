@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import { app } from './app'
 
 const start = async () => {
+  console.log(`auth service starting up on ${process.env.HOSTNAME}`)
   // Check environment variables
   if (!process.env.JWT_KEY) {
     throw new Error('Please define JWT_KEY environment variable')
