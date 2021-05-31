@@ -2,6 +2,7 @@ import { natsWrapper } from './natsWrapper'
 import { OrderCreatedListener } from './events/listeners/orderCreatedListener'
 
 const start = async () => {
+  console.log(`expiration service starting up on ${process.env.HOSTNAME}`)
   // Check environment variables
   if (!process.env.NATS_CLUSTER_ID) {
     throw new Error('Please define NATS_CLUSTER_ID environment variable')
