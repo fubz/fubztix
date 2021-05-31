@@ -11,9 +11,8 @@ const buildClient = ({ req }) => {
   if (typeof window == 'undefined') {
     // We are on the server
     return axios.create({
-      baseURL:
-        'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
-      // baseURL: 'http://ingress-nginx-controller.kube-system.svc.cluster.local',
+      baseURL: 'http://tix.msgsync.xyz', // Digital Ocean
+      // 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local', // Local
       headers: req.headers,
     })
   } else {
